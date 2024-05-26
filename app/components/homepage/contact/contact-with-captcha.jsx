@@ -74,9 +74,17 @@ function ContactWithCaptcha() {
 
   return (
     <div className="">
-      <p className="font-medium mb-5 text-[#16f2b3] text-xl uppercase">
-        Contact with me
-      </p>
+      <div id='projects' className="font-medium mb-5 text-[#16f2b3] text-xl uppercase">
+        <div className="sticky top-10">
+          <div className="w-[80px] h-[80px] bg-violet-100 rounded-full absolute -top-3 left-0 translate-x-1/2 filter blur-3xl  opacity-30"></div>
+          <div className="flex items-center justify-start relative">
+            <span className="bg-[#1a1443] absolute left-0  w-fit text-white px-5 py-3 text-xl rounded-md">
+              CONTACT ME
+            </span>
+            <span className="w-full h-[2px] bg-[#1a1443]"></span>
+          </div>      
+        </div>
+      </div>
       <div className="max-w-3xl text-white rounded-lg border border-[#464c6a] p-3 lg:p-5">
         <p className="text-sm text-[#d3d8e8]">
           {"If you have any questions or concerns, please don't hesitate to contact me. I am open to any work opportunities that align with my skills and interests."}
