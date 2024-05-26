@@ -1,20 +1,20 @@
-export const educations = [
+export const experiences = [
   {
     id: 1,
-    title: "Bachelor Degree",
-    duration: "2020 - Present",
-    institution: "National University of Bangladesh",
+    title: 'Software Engineer I',
+    company: "Teton Private Ltd.",
+    duration: "(Jan 2022 - Present)"
   },
   {
     id: 2,
-    title: "Higher Secondary Certificate",
-    duration: "2018 - 2020",
-    institution: "Noakhali Islamia Kamil Madrasah",
+    title: "FullStack Developer",
+    company: "Fiverr (freelance)",
+    duration: "(Jun 2021 - Jan 2022)"
   },
   {
     id: 3,
-    title: "Secondary School Certificate",
-    duration: "2008 - 2018",
-    institution: "Baitus Saif Islamia Madrasah",
+    title: "Self Employed",
+    company: "Code and build something in everyday.",
+    duration: "(Jan 2018 - Present)"
   }
 ]
