@@ -31,7 +31,7 @@ function ContactSection() {
                 size={36}
               />
               <span>
-                Nathan.Hoorbakht@gmail.com
+              {personalData.email}
               </span>
             </p>
             <p className="text-sm md:text-xl flex items-center gap-3">
@@ -40,7 +40,7 @@ function ContactSection() {
                 size={36}
               />
               <span>
-                0449 860 354
+              {personalData.phone}
               </span>
             </p>
             <p className="text-sm md:text-xl flex items-center gap-3">
