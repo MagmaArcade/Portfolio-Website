@@ -4,4 +4,5 @@ export const contactsData = {
     address: 'Melbourne, Victoria',
     github: 'https://github.com/MagmaArcade',
     linkedIn: 'https://www.linkedin.com/in/N-Hoorbakht/',
+    devUsername: "said7388"
 }
