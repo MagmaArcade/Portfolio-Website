@@ -3,7 +3,7 @@ export const experiences = [
     id: 1,
     title: 'Retail Associate',
     company: "Optus Telecommunications",
-    duration: "(Jan 2022 - Present)"
+    duration: "(2022 - Present)"
   },
   {
     id: 2,
