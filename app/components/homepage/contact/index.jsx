@@ -47,7 +47,7 @@ function ContactSection() {
                 size={36}
               />
               <span>
-                {personalData.address}
+                Nathan.Hoorbakht@gmail.com
               </span>
             </p>
           </div>
