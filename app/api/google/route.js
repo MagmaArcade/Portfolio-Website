@@ -13,8 +13,12 @@ export async function POST(request) {
   }
 
   try {
-    const url = `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${reqBody.token}`;
-    const res = await axios.post(url);
+    const url = `https://www.google.com/recaptcha/api/siteverify`;
+    const params = new URLSearchParams();
+    params.append('secret', secretKey);
+    params.append('response', reqBody.token);
+
+    const res = await axios.post(url, params);
 
     if (res.data.success) {
       return NextResponse.json({
