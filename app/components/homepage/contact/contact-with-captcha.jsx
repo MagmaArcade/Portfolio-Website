@@ -30,19 +30,10 @@ function ContactWithCaptcha() {
     if (!captcha) {
       toast.error('Please complete the captcha!');
       return;
-    } else {
-      const res = await axios.post(`${process.env.NEXT_PUBLIC_APP_URL}/api/google`, {
-        token: captcha
-      });
-
-      setCaptcha(null);
-      if (!res.data.success) {
-        toast.error('Captcha verification failed!');
-        return;
-      };
-    };
-
+    }
+  
     e.preventDefault();
+  
     if (!input.email || !input.message || !input.name) {
       setError({ ...error, required: true });
       return;
@@ -50,15 +41,19 @@ function ContactWithCaptcha() {
       return;
     } else {
       setError({ ...error, required: false });
-    };
-
+    }
+  
     const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
     const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
     const options = { publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY };
-
+  
     try {
-      const res = await emailjs.send(serviceID, templateID, input, options);
-
+      // Include the reCAPTCHA token in the request payload
+      const res = await emailjs.send(serviceID, templateID, {
+        ...input,
+        'g-recaptcha-response': captcha // Include reCAPTCHA token
+      }, options);
+  
       if (res.status === 200) {
         toast.success('Message sent successfully!');
         setInput({
@@ -66,11 +61,12 @@ function ContactWithCaptcha() {
           email: '',
           message: '',
         });
-      };
+      }
     } catch (error) {
       toast.error(error?.text || error);
-    };
+    }
   };
+  
 
   return (
     <div className="">
