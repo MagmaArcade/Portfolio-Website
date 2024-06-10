@@ -14,7 +14,6 @@ function ContactWithCaptcha() {
     email: '',
     message: '',
   });
-  const [captcha, setCaptcha] = useState(null);
   const [error, setError] = useState({
     email: false,
     required: false,
@@ -38,29 +37,26 @@ function ContactWithCaptcha() {
       return;
     }
 
-    const token = await recaptchaRef.current.executeAsync();
-    setCaptcha(token);
-
-    const res = await axios.post(`${process.env.NEXT_PUBLIC_APP_URL}/api/google`, {
-      token: token
-    });
-
-    setCaptcha(null);
-    recaptchaRef.current.reset();
-
-    if (!res.data.success) {
-      toast.error('Captcha verification failed!');
-      return;
-    }
-
-    const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
-    const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
-    const options = { publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY };
-
     try {
-      const res = await emailjs.send(serviceID, templateID, input, options);
+      const token = await recaptchaRef.current.executeAsync();
+      recaptchaRef.current.reset();
 
-      if (res.status === 200) {
+      const res = await axios.post(`${process.env.NEXT_PUBLIC_APP_URL}/api/google`, {
+        token: token
+      });
+
+      if (!res.data.success) {
+        toast.error('Captcha verification failed!');
+        return;
+      }
+
+      const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+      const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+      const options = { publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY };
+
+      const emailRes = await emailjs.send(serviceID, templateID, input, options);
+
+      if (emailRes.status === 200) {
         toast.success('Message sent successfully!');
         setInput({
           name: '',
@@ -69,7 +65,7 @@ function ContactWithCaptcha() {
         });
       }
     } catch (error) {
-      toast.error(error?.text || error);
+      toast.error(error?.text || error.message || 'An error occurred');
     }
   };
 
