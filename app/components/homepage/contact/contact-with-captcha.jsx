@@ -1,7 +1,10 @@
+"use client";
+// @flow strict
 import { isValidEmail } from '@/utils/check-email';
 import emailjs from '@emailjs/browser';
 import axios from 'axios';
-import { useState, useRef } from 'react'; // Import useRef
+import { useState } from 'react';
+import ReCAPTCHA from 'react-google-recaptcha';
 import { TbMailForward } from "react-icons/tb";
 import { toast } from 'react-toastify';
 
@@ -11,13 +14,11 @@ function ContactWithCaptcha() {
     email: '',
     message: '',
   });
+  const [captcha, setCaptcha] = useState(null);
   const [error, setError] = useState({
-    email: false, 
+    email: false,
     required: false,
   });
-
-  // Reference to store the reCAPTCHA token
-  const recaptchaRef = useRef();
 
   const checkRequired = () => {
     if (input.email && input.message && input.name) {
@@ -26,15 +27,22 @@ function ContactWithCaptcha() {
   };
 
   const handleSendMail = async (e) => {
-    e.preventDefault();
-    // Get the reCAPTCHA token from the ref
-    const token = recaptchaRef.current.getValue();
-    
-    if (!token) {
+    if (!captcha) {
       toast.error('Please complete the captcha!');
       return;
-    }
+    } else {
+      const res = await axios.post(`${process.env.NEXT_PUBLIC_APP_URL}/api/google`, {
+        token: captcha
+      });
 
+      setCaptcha(null);
+      if (!res.data.success) {
+        toast.error('Captcha verification failed!');
+        return;
+      };
+    };
+
+    e.preventDefault();
     if (!input.email || !input.message || !input.name) {
       setError({ ...error, required: true });
       return;
@@ -42,7 +50,7 @@ function ContactWithCaptcha() {
       return;
     } else {
       setError({ ...error, required: false });
-    }
+    };
 
     const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
     const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
@@ -58,10 +66,10 @@ function ContactWithCaptcha() {
           email: '',
           message: '',
         });
-      }
+      };
     } catch (error) {
       toast.error(error?.text || error);
-    }
+    };
   };
 
   return (
@@ -119,10 +127,10 @@ function ContactWithCaptcha() {
               value={input.message}
             />
           </div>
-          
-          {/* Hidden reCAPTCHA component */}
-          <div className="g-recaptcha" data-sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY} ref={recaptchaRef}></div>
-          
+          <ReCAPTCHA
+            sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+            onChange={(code) => setCaptcha(code)}
+          />
           <div className="flex flex-col items-center gap-2">
             {error.required &&
               <p className="text-sm text-red-400">
@@ -142,6 +150,6 @@ function ContactWithCaptcha() {
       </div>
     </div>
   );
-}
+};
 
 export default ContactWithCaptcha;
