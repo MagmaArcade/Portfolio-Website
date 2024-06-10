@@ -34,25 +34,18 @@ function ContactWithCaptcha() {
   
     e.preventDefault();
   
-    if (!input.email || !input.message || !input.name) {
-      setError({ ...error, required: true });
-      return;
-    } else if (error.email) {
-      return;
-    } else {
-      setError({ ...error, required: false });
-    }
-  
-    const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
-    const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
-    const options = { publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY };
+    // Include the reCAPTCHA token in the request payload
+    const requestData = {
+      ...input,
+      'g-recaptcha-response': captcha
+    };
   
     try {
-      // Include the reCAPTCHA token in the request payload
-      const res = await emailjs.send(serviceID, templateID, {
-        ...input,
-        'g-recaptcha-response': captcha // Include reCAPTCHA token
-      }, options);
+      const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+      const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+      const options = { publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY };
+  
+      const res = await emailjs.send(serviceID, templateID, requestData, options);
   
       if (res.status === 200) {
         toast.success('Message sent successfully!');
@@ -66,6 +59,7 @@ function ContactWithCaptcha() {
       toast.error(error?.text || error);
     }
   };
+  
   
 
   return (
