@@ -1,8 +1,3 @@
-import ayla from '/public/image/ayla.jpg';
-import crefin from '/public/image/crefin.jpg';
-import realEstate from '/public/image/real-estate.jpg';
-import travel from '/public/image/travel.jpg';
-
 export const projectsData = [
     {
         id: 1,
@@ -12,7 +7,7 @@ export const projectsData = [
         role: 'Full Stack Developer',
         code: '',
         demo: '',
-        image: crefin,
+        image: '',
     },
     {
         id: 2,
@@ -22,8 +17,40 @@ export const projectsData = [
         role: 'Developer',
         code: '',
         demo: '',
-        image: travel
+        image: ''
+    },
+    {
+        id: 3,
+        name: 'Android Permission Attestor',
+        description: 'Developed an Android app to assess and flag potentially dangerous permissions in installed applications. Features include user-friendly permission summaries and secure storage options. Conducted extensive functional and reliability testing to meet client requirements.',
+        tools: ['Android', 'Kotlin', 'XML', 'SQLite', 'Jira', 'GitHub'],
+        role: 'Project Manager and Developer',
+        code: '',
+        demo: '',
+        image: ''
+    },
+    {
+        id: 4,
+        name: 'Rust Corrosion Detection System',
+        description: 'Built an image detection model using Mask RCNN to identify and rust and other corrosion on remote electrical & telecommunication towers. This involved data annotation, model training, and evaluation, using COCO format for high detection accuracy. Integrated OpenCV for visualizing results with confidence scores and bounding boxes.',
+        tools: ['Python', 'Mask RCNN', 'COCO Dataset', 'OpenCV', 'LabelMe'],
+        role: 'Developer',
+        code: '',
+        demo: '',
+        image: ''
+    }, 
+    {
+        id: 5,
+        name: 'Student Attendance Face Recognition System',
+        description: 'Developed an attendance system using face recognition and spoof detection to ensure secure and accurate attendance tracking. The project involved model training, real-time face detection, liveness verification, and a user-friendly interface for administrators.',
+        tools: ['Python', 'face_recognition library', 'OpenCV', 'Tkinter', 'Matplotlib'],
+        role: 'Developer',
+        code: '',
+        demo: '',
+        image: ''
     }
+    
+    
 ];
 
 
