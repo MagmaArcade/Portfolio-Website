@@ -1,6 +1,6 @@
 export const contactsData = {
     email: 'Nathan.Hoorbakht@gmail.com',
-    phone: '+61449860354',
+    phone: '0449860354',
     address: 'Melbourne, Victoria',
     github: 'https://github.com/MagmaArcade',
     facebook: '',

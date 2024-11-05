@@ -8,12 +8,12 @@ export const projectsData = [
         code: '',
         demo: '',
         image: '',
-    },
+    }, 
     {
         id: 2,
-        name: 'Traffic Flow Prediction',
-        description: 'My team built a traffic flow prediction model using datsets from the Boroondara area. Employing machine learning models for predictions. It includes data pre-processing, model training, prediction, evaluation, and a user-friendly interface.',
-        tools: ['Python', 'Machine Learning', "Keras", "Pandas", "Scikit", "Tensor Flow", "Pyglet", "Open GL"],
+        name: 'Student Attendance Face Recognition System',
+        description: 'Developed an attendance system using face recognition and spoof detection to ensure secure and accurate attendance tracking. The project involved model training, real-time face detection, liveness verification, and a user-friendly interface for administrators.',
+        tools: ['Python', 'face_recognition library', 'OpenCV', 'Tkinter', 'Matplotlib'],
         role: 'Developer',
         code: '',
         demo: '',
@@ -41,15 +41,14 @@ export const projectsData = [
     }, 
     {
         id: 5,
-        name: 'Student Attendance Face Recognition System',
-        description: 'Developed an attendance system using face recognition and spoof detection to ensure secure and accurate attendance tracking. The project involved model training, real-time face detection, liveness verification, and a user-friendly interface for administrators.',
-        tools: ['Python', 'face_recognition library', 'OpenCV', 'Tkinter', 'Matplotlib'],
+        name: 'Traffic Flow Prediction',
+        description: 'My team built a traffic flow prediction model using datsets from the Boroondara area. Employing machine learning models for predictions. It includes data pre-processing, model training, prediction, evaluation, and a user-friendly interface.',
+        tools: ['Python', 'Machine Learning', "Keras", "Pandas", "Scikit", "Tensor Flow", "Pyglet", "Open GL"],
         role: 'Developer',
         code: '',
         demo: '',
         image: ''
-    }
-    
+    },
     
 ];
 
