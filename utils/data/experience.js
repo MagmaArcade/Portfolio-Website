@@ -7,7 +7,7 @@ export const experiences = [
   },
   {
     id: 2,
-    title: "Junior Search Engine Optimization Specialist",
+    title: "Search Engine Optimization Specialist",
     company: "IT BOOST Australia",
     duration: "(2019 - 2020)"
   },
