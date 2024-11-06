@@ -18,13 +18,17 @@ function ContactSection() {
         height={795}
         className="absolute top-0 -z-10"
       />
-      
-      <div className="hidden lg:flex flex-col items-center absolute top-24 -right-8">
-        <span className="bg-[#1A1443] w-fit text-dark rotate-90 p-2 px-5 text-xl rounded-md">
-          CONTACT
-        </span>
-        <span className="h-36 w-[2px] bg-[#CBD2FF]"></span>
+
+      <div className="flex justify-center my-5 lg:py-8">
+        <div className="flex items-center">
+          <span className="w-24 h-[2px] bg-[#1A1443]"></span>
+          <span className="bg-[#1A1443] w-fit text-white p-2 px-5 text-xl rounded-md">
+            CONTACT ME
+          </span>
+          <span className="w-24 h-[2px] bg-[#1A1443]"></span>
+        </div>
       </div>
+    
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
         {
           (process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY && process.env.NEXT_PUBLIC_RECAPTCHA_SECRET_KEY) ? <ContactWithCaptcha />

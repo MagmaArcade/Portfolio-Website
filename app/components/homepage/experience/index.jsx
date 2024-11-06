@@ -20,7 +20,7 @@ function Experience() {
         <div className="flex  items-center">
           <span className="w-24 h-[2px] bg-[#1A1443]"></span>
           <span className="bg-[#1A1443] w-fit text-white p-2 px-5 text-xl rounded-md">
-            Experiences
+            EXPERIENCE
           </span>
           <span className="w-24 h-[2px] bg-[#1A1443]"></span>
         </div>
@@ -57,10 +57,10 @@ function Experience() {
                           <BsPersonWorkspace size={36} />
                         </div>
                         <div>
-                          <p className="text-white sm:text-xl mb-2 font-medium uppercase">
+                          <p className="dark-text sm:text-xl mb-2 font-medium uppercase">
                             {experience.title}
                           </p>
-                          <p className="text-sm sm:text-white">
+                          <p className="text-sm sm:dark-text">
                             {experience.company}
                           </p>
                         </div>

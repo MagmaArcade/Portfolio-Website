@@ -63,9 +63,6 @@ function ContactWithCaptcha() {
 
   return (
     <div className="">
-      <p className="font-medium mb-5 text-[#4453A1] text-xl uppercase">
-        CONTACT ME
-      </p>
       <div className="max-w-3xl text-dark rounded-lg border border-[#464c6a] p-3 lg:p-5">
         <p className="text-sm text-[#27293C]">
           {"If you have any questions or concerns, please don't hesitate to contact me. I am open to any work opportunities that align with my skills and interests."}

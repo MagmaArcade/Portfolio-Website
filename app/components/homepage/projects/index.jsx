@@ -18,7 +18,7 @@ const Projects = () => {
         <div className="flex items-center">
           <span className="w-24 h-[2px] bg-[#1A1443]"></span>
           <span className="bg-[#1A1443] w-fit text-white p-2 px-5 text-xl rounded-md">
-            Projects
+            PROJECTS
           </span>
           <span className="w-24 h-[2px] bg-[#1A1443]"></span>
         </div>
