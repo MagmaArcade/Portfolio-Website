@@ -72,7 +72,7 @@ function ContactWithCaptcha() {
         </p>
         <div className="mt-6 flex flex-col gap-4">
           <div className="flex flex-col gap-2">
-            <label className="text-dark">Your Name: </label>
+            <label className="dark-text">Your Name: </label>
             <input
               className="bg-[#CBD2FF] w-full border rounded-md border-[#353a52] focus:border-[#4453A1] ring-0 outline-0 transition-all duration-300 px-3 py-2"
               type="text"
@@ -85,7 +85,7 @@ function ContactWithCaptcha() {
           </div>
 
           <div className="flex flex-col gap-2">
-            <label className="text-dark">Your Email: </label>
+            <label className="dark-text">Your Email: </label>
             <input
               className="bg-[#CBD2FF] w-full border rounded-md border-[#353a52] focus:border-[#4453A1] ring-0 outline-0 transition-all duration-300 px-3 py-2"
               type="email"
@@ -104,7 +104,7 @@ function ContactWithCaptcha() {
           </div>
 
           <div className="flex flex-col gap-2">
-            <label className="text-dark">Your Message: </label>
+            <label className="dark-text">Your Message: </label>
             <textarea
               className="bg-[#CBD2FF] w-full border rounded-md border-[#353a52] focus:border-[#4453A1] ring-0 outline-0 transition-all duration-300 px-3 py-2"
               maxLength="500"

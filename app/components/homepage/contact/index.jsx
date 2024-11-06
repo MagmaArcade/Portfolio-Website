@@ -10,7 +10,7 @@ import ContactWithoutCaptcha from './contact-without-captcha';
 
 function ContactSection() {
   return (
-    <div id="contact" className="my-12 lg:my-16 relative mt-24 text-dark">
+    <div id="contact" className="my-12 lg:my-16 relative mt-24 text-dark z-50 border-t my-12 lg:my-24 border-[#25213b]">
       <Image
         src="/section.svg"
         alt="Hero"
