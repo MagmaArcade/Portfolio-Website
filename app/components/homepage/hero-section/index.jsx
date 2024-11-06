@@ -110,26 +110,26 @@ function HeroSection() {
               </div>
               <div>
                 <span className="ml-4 lg:ml-8 mr-2 text-white">hardWorker:</span>
-                <span className="text-light-green-400">true</span>
+                <span className="text-green-500">true</span>
                 <span className="text-gray-400">,</span>
               </div>
               <div>
                 <span className="ml-4 lg:ml-8 mr-2 text-white">quickLearner:</span>
-                <span className="text-light-green-400">true</span>
+                <span className="text-green-500">true</span>
                 <span className="text-gray-400">,</span>
               </div>
               <div>
                 <span className="ml-4 lg:ml-8 mr-2 text-white">problemSolver:</span>
-                <span className="text-light-green-400">true</span>
+                <span className="text-green-500">true</span>
                 <span className="text-gray-400">,</span>
               </div>
               <div>
-                <span className="ml-4 lg:ml-8 mr-2 text-green-400">hireable:</span>
-                <span className="text-light-green-400">function</span>
+                <span className="ml-4 lg:ml-8 mr-2 text-green-500">hireable:</span>
+                <span className="text-green-500">function</span>
                 <span className="text-gray-400">{'() {'}</span>
               </div>
               <div>
-                <span className="ml-8 lg:ml-16 mr-2 text-light-green-400">return</span>
+                <span className="ml-8 lg:ml-16 mr-2 text-green-500">return</span>
                 <span className="text-gray-400">{`(`}</span>
               </div>
               <div>
