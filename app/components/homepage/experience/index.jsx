@@ -60,7 +60,7 @@ function Experience() {
                           <p className="dark-text sm:text-xl mb-2 font-medium uppercase">
                             {experience.title}
                           </p>
-                          <p className="text-sm sm:dark-text">
+                          <p className="text-sm dark-text">
                             {experience.company}
                           </p>
                         </div>
