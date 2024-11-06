@@ -6,7 +6,7 @@ function AboutSection() {
   return (
     <div id="about" className="my-12 lg:my-16 relative">
       <div className="hidden lg:flex flex-col items-center absolute top-16 -right-8">
-        <span className="bg-[#27293c] w-fit text-dark rotate-90 p-2 px-5 text-xl rounded-md">
+        <span className="bg-[#1A1443] w-fit text-dark rotate-90 p-2 px-5 text-xl rounded-md">
           ABOUT ME
         </span>
         <span className="h-36 w-[2px] bg-[#cbd2ff]"></span>
