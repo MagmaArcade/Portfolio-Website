@@ -37,7 +37,7 @@
   mask: linear-gradient(#0000, #0000),
     conic-gradient(from calc((var(--start) - (var(--spread) * 0.5)) * 1deg),
       #000 0deg,
-      #fff,
+      #27293C,
       #0000 calc(var(--spread) * 1deg));
   mask-composite: intersect;
   mask-clip: padding-box, border-box;
@@ -52,13 +52,13 @@
   content: "";
   border-radius: 12px;
   pointer-events: none;
-  background: #e0d9e4;
+  background: #27293C;
   background-attachment: fixed;
   border-radius: 12px;
   mask: linear-gradient(#0000, #0000),
     conic-gradient(from calc(((var(--start) + (var(--spread) * 0.25)) - (var(--spread) * 1.5)) * 1deg),
       #ffffff26 0deg,
-      white,
+      #27293C,
       #ffffff26 calc(var(--spread) * 2.5deg));
   mask-clip: padding-box, border-box;
   mask-composite: intersect;
@@ -88,7 +88,7 @@
   mask: linear-gradient(#0000, #0000),
     conic-gradient(from calc(((var(--start) + (var(--spread) * 0.25)) - (var(--spread) * 0.5)) * 1deg),
       #0000 0deg,
-      #fff,
+      #27293C,
       #0000 calc(var(--spread) * 0.5deg));
   filter: brightness(1.5);
   mask-clip: padding-box, border-box;
