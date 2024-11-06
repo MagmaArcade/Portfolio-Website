@@ -23,12 +23,12 @@
   --alpha: 0;
   content: "";
   background: conic-gradient(from 180deg at 50% 70%,
-      #ff9ecd 0deg,
-      #b98df2 72.0000010728836deg,
-      #ff9ecd 144.0000021457672deg,
-      #7b92ff 216.00000858306885deg,
-      #ff9ecd 288.0000042915344deg,
-      #ffffff 1turn);
+  #4453A1 0deg,
+  #1A1443 72.0000010728836deg,
+  #4453A1 144.0000021457672deg,
+  #25213B 216.00000858306885deg,
+  #6073EF 288.0000042915344deg,
+  #fafafa 1turn);
   background-attachment: fixed;
   position: absolute;
   inset: -5px;
@@ -72,12 +72,12 @@
   pointer-events: none;
   position: absolute;
   background: conic-gradient(from 180deg at 50% 70%,
-      #ff9ecd 0deg,
-      #b98df2 72.0000010728836deg,
-      #ff9ecd 144.0000021457672deg,
-      #7b92ff 216.00000858306885deg,
-      #ff9ecd 288.0000042915344deg,
-      #ffffff 1turn);
+  #4453A1 0deg,
+  #1A1443 72.0000010728836deg,
+  #4453A1 144.0000021457672deg,
+  #25213B 216.00000858306885deg,
+  #6073EF 288.0000042915344deg,
+  #fafafa 1turn);
   background-attachment: fixed;
   border-radius: 12px;
   opacity: var(--active, 0);

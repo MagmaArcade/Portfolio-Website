@@ -16,11 +16,11 @@ const Projects = () => {
 
       <div className="flex justify-center my-5 lg:py-8">
         <div className="flex items-center">
-          <span className="w-24 h-[2px] bg-[#1a1443]"></span>
-          <span className="bg-[#1a1443] w-fit text-white p-2 px-5 text-xl rounded-md">
+          <span className="w-24 h-[2px] bg-[#CBD2FF]"></span>
+          <span className="bg-[#CBD2FF] w-fit text-white p-2 px-5 text-xl rounded-md">
             Projects
           </span>
-          <span className="w-24 h-[2px] bg-[#1a1443]"></span>
+          <span className="w-24 h-[2px] bg-[#CBD2FF]"></span>
         </div>
       </div>
 
@@ -37,11 +37,11 @@ const Projects = () => {
                   className="absolute bottom-0 opacity-80"
                 />
                 <div className="flex justify-center mb-4">
-                  <p className="text-xs sm:text-sm text-[#16f2b3]">
+                  <p className="text-xs sm:text-sm text-[#4453A1]">
                     {project.duration}
                   </p>
                 </div>
-                <div className="text-center text-[#16f2b3] text-base lg:text-xl">
+                <div className="text-center text-[#4453A1] text-base lg:text-xl">
                   {project.name}
                 </div>
                 <div className="overflow-hidden border-t-[2px] border-indigo-900 px-4 lg:px-8 py-4 lg:py-8">
