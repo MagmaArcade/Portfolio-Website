@@ -10,6 +10,14 @@ import ContactWithoutCaptcha from './contact-without-captcha';
 function ContactSection() {
   return (
     <div id="contact" className="my-12 lg:my-16 relative mt-24 text-dark">
+      <Image
+        src="/section.svg"
+        alt="Hero"
+        width={1572}
+        height={795}
+        className="absolute top-0 -z-10"
+      />
+      
       <div className="hidden lg:flex flex-col items-center absolute top-24 -right-8">
         <span className="bg-[#1A1443] w-fit text-dark rotate-90 p-2 px-5 text-xl rounded-md">
           CONTACT
@@ -29,8 +37,8 @@ function ContactSection() {
                 className="bg-[#8b98a5] p-2 rounded-full hover:bg-[#4453A1] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
                 size={36}
               />
-              <span>
-              {personalData.email}
+              <span className="dark-text">
+                {personalData.email}
               </span>
             </p>
             <p className="text-sm md:text-xl flex items-center gap-3">
@@ -38,8 +46,8 @@ function ContactSection() {
                 className="bg-[#8b98a5] p-2 rounded-full hover:bg-[#4453A1] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
                 size={36}
               />
-              <span>
-              {personalData.phone}
+              <span className="dark-text">
+                {personalData.phone}
               </span>
             </p>
             <p className="text-sm md:text-xl flex items-center gap-3">
@@ -47,7 +55,7 @@ function ContactSection() {
                 className="bg-[#8b98a5] p-2 rounded-full hover:bg-[#4453A1] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
                 size={36}
               />
-              <span>
+              <span className="dark-text">
                 {personalData.address}
               </span>
             </p>
