@@ -125,11 +125,11 @@ function HeroSection() {
               </div>
               <div>
                 <span className="ml-4 lg:ml-8 mr-2 text-green-500">hireable:</span>
-                <span className="text-green-500">function</span>
+                <span className="text-pink-500">function</span>
                 <span className="text-gray-400">{'() {'}</span>
               </div>
               <div>
-                <span className="ml-8 lg:ml-16 mr-2 text-green-500">return</span>
+                <span className="ml-8 lg:ml-16 mr-2 text-pink-500">return</span>
                 <span className="text-gray-400">{`(`}</span>
               </div>
               <div>
