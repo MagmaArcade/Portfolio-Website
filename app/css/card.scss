@@ -23,12 +23,12 @@
   --alpha: 0;
   content: "";
   background: conic-gradient(from 180deg at 50% 70%,
-  #002BFF 0deg,
-  #041fa3 72.0000010728836deg,
+  #01b1fd 0deg,
+  #004bae 72.0000010728836deg,
   #002BFF 144.0000021457672deg,
-  #120465 216.00000858306885deg,
+  #0064a1 216.00000858306885deg,
   #01b1fd 288.0000042915344deg,
-  #27293C 1turn);
+  #ffff 1turn);
   background-attachment: fixed;
   position: absolute;
   inset: -5px;
@@ -72,12 +72,12 @@
   pointer-events: none;
   position: absolute;
   background: conic-gradient(from 180deg at 50% 70%,
-  #002BFF 0deg,
-  #041fa3 72.0000010728836deg,
+  #01b1fd 0deg,
+  #004bae 72.0000010728836deg,
   #002BFF 144.0000021457672deg,
-  #120465 216.00000858306885deg,
+  #0064a1 216.00000858306885deg,
   #01b1fd 288.0000042915344deg,
-  #27293C 1turn);
+  #ffff 1turn);
   background-attachment: fixed;
   border-radius: 12px;
   opacity: var(--active, 0);
