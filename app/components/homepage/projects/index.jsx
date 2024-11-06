@@ -55,7 +55,7 @@ const Projects = () => {
                     <div>
                       <span className="ml-4 lg:ml-8 mr-2 text-white">name:</span>
                       <span className="text-gray-400">&apos;</span>
-                      <span className="text-indigo-500">{project.name}</span>
+                      <span className="text-red-500">{project.name}</span>
                       <span className="text-gray-400">&apos;,</span>
                     </div>
 
@@ -65,7 +65,7 @@ const Projects = () => {
                       {
                         project.tools.map((tag, i) => (
                           <React.Fragment key={i}>
-                            <span className="text-red-500">{tag}</span>
+                            <span className="text-orange-400">{tag}</span>
                             {
                               project.tools.length - 1 !== i &&
                               <span className="text-gray-400">&apos;, &apos;</span>
@@ -77,12 +77,12 @@ const Projects = () => {
                     </div>
                     <div>
                       <span className="ml-4 lg:ml-8 mr-2 text-white">myRole:</span>
-                      <span className="text-orange-400">{project.role}</span>
+                      <span className="text-purple-500">{project.role}</span>
                       <span className="text-gray-400">,</span>
                     </div>
                     <div className="ml-4 lg:ml-8 mr-2">
                       <span className="text-white">description:</span>
-                      <span className="text-violet-500">{' ' + project.description}</span>
+                      <span className="text-blue-500">{' ' + project.description}</span>
                       <span className="text-gray-400">,</span>
                     </div>
                     <div><span className="text-gray-400">{`};`}</span></div>
